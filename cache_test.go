@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	pb "github.com/google/safebrowsing/internal/safebrowsing_proto"
+	pb "git.phuongvietvu0306.com/safebrowsing/protocol/safebrowsing_proto"
 )
 
 func TestCacheLookup(t *testing.T) {

@@ -22,7 +22,7 @@ import (
 	"sort"
 	"strings"
 
-	pb "github.com/google/safebrowsing/internal/safebrowsing_proto"
+	pb "git.phuongvietvu0306.com/safebrowsing/protocol/safebrowsing_proto"
 )
 
 const (
