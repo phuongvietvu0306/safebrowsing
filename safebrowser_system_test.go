@@ -19,7 +19,7 @@ import (
 	"testing"
 	"time"
 
-	pb "git.phuongvietvu0306.com/safebrowsing/protocol/safebrowsing_proto"
+	pb "github.com/phuongvietvu0306/safebrowsing/protocol/safebrowsing_proto"
 )
 
 // The system tests below are non-deterministic and operate by performing

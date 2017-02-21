@@ -79,7 +79,7 @@ import (
 	"sync/atomic"
 	"time"
 
-	pb "git.phuongvietvu0306.com/safebrowsing/protocol/safebrowsing_proto"
+	pb "github.com/phuongvietvu0306/safebrowsing/protocol/safebrowsing_proto"
 )
 
 const (
@@ -251,7 +251,7 @@ func (c Config) copy() Config {
 // local database and caching that would normally be needed to interact
 // with the API server.
 type SafeBrowser struct {
-	config Config
+	Config Config
 	stats  Stats
 	api    api
 	db     database

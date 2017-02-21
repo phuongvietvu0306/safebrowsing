@@ -24,7 +24,7 @@ import (
 	"sync"
 	"time"
 
-	pb "git.phuongvietvu0306.com/safebrowsing/protocol/safebrowsing_proto"
+	pb "github.com/phuongvietvu0306/safebrowsing/protocol/safebrowsing_proto"
 )
 
 // jitter is the maximum amount of time that we expect an API list update to
