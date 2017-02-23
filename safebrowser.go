@@ -251,7 +251,7 @@ func (c Config) copy() Config {
 // local database and caching that would normally be needed to interact
 // with the API server.
 type SafeBrowser struct {
-	Config Config
+	config Config
 	stats  Stats
 	api    api
 	db     database
@@ -339,6 +339,19 @@ func (sb *SafeBrowser) Status() (Stats, error) {
 		QueriesFail:       atomic.LoadInt64(&sb.stats.QueriesFail),
 	}
 	return stats, sb.db.Status()
+}
+
+// ChangeKey changes the APIKey with a given key
+// This allows to have a changeable APIKey Safebrowser
+func (sb *SafeBrowser) ChangeKey(key string) (err error) {
+	sb.config.APIKey = key
+	sb.api, err = newNetAPI(sb.config.ServerURL, sb.config.APIKey)
+	if err != nil {
+		return err
+	}
+
+	sb.db.Update(sb.api)
+	return nil
 }
 
 // LookupURLs looks up the provided URLs. It returns a list of threats, one for
