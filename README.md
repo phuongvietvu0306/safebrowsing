@@ -1,3 +1,7 @@
+This Google Safebrowsing is forked from the [Google Safe Browsing](https://github.com/google/safebrowsing)
+but added some few tweaks to have changeable APIKey and public internal directory
+for further extensions and multiple uses.
+
 [![Build Status](https://travis-ci.org/google/safebrowsing.svg?branch=master)](https://travis-ci.org/google/safebrowsing)
 
 # Reference Implementation for the Usage of Google Safe Browsing APIs (v4)
